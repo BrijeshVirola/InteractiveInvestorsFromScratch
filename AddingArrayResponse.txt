@@ -1,0 +1,269 @@
+Request:
+{
+  "Method": "getUserListUsernameAndCurrencyByUserIds",
+  "ID": "977d9d78-96ca-409b-9a4a-c46e016f251b",
+  "Params": {
+    "user_ids": [
+      674595
+    
+    ]
+  }
+}
+
+Response:
+{
+    "id": "977d9d78-96ca-409b-9a4a-c46e016f251b",
+    "result": [
+        {
+            "user_id": 674595,
+            "username": "hampe_ponny",
+            "currency_id": 48
+        }
+    ]
+}
+====================================================
+
+Req Pojo:
+
+public class GetUserListUsernameAndCurrencyByUserIdsReq {
+	@SuppressWarnings("unused")
+	private String Method;
+	@SuppressWarnings("unused")
+	private String ID;
+	@SuppressWarnings("unused")
+	private GetUserListUsernameAndCurrencyByUserIdsParams Params;
+	
+	private GetUserListUsernameAndCurrencyByUserIdsReq(Builder builder) {
+		Method = builder.method;
+		ID = builder.ID;
+		Params = new GetUserListUsernameAndCurrencyByUserIdsParams(builder);
+	}
+
+	public static class Builder {
+		private String method;
+		private String ID;
+		private List<Integer> user_ids;
+
+		public Builder id(String id) {
+			this.ID = id;
+			return this;
+		}
+		
+		public Builder userIds(List<Integer> userIds) {
+			this.user_ids = userIds;
+			return this;
+		}
+		
+		public Builder addUserId(Integer user_id) {
+			this.user_ids.add(user_id);
+			return this;
+		}
+		
+		public Builder method(String method) {
+			this.method = method;
+			return this;
+		}
+		
+		public Builder defaults() {
+			this.method = "getUserListUsernameAndCurrencyByUserIds";
+			this.ID = "1";
+			user_ids = new ArrayList<>();
+			return this;
+		}
+		
+		public GetUserListUsernameAndCurrencyByUserIdsReq build() {
+			return new GetUserListUsernameAndCurrencyByUserIdsReq(this);
+		}
+	}
+	
+	private class GetUserListUsernameAndCurrencyByUserIdsParams {
+		@SuppressWarnings("unused")
+		private List<Integer> user_ids;
+		
+		public GetUserListUsernameAndCurrencyByUserIdsParams(Builder builder) {
+			user_ids = builder.user_ids;
+		}
+	}
+}
+
+==================================================================================
+==================================================================================
+
+Response pojo:
+
+public class GetUserListUsernameAndCurrencyByUserIdsResp {
+
+	@SuppressWarnings("unused")
+	private String id;
+	@SuppressWarnings("unused")
+	private List<GetUserUsernameAndCurrency> result = new ArrayList<>();
+
+	private GetUserListUsernameAndCurrencyByUserIdsResp(Builder builder) {
+		this.id = builder.id;
+		this.result = builder.result;
+	}
+	
+	public static class Builder {
+		private String id;
+		private List<GetUserUsernameAndCurrency> result = new ArrayList<>();
+
+		public Builder id(String id) {
+			this.id = id;
+			return this;
+		}
+		
+		public Builder result(List<GetUserUsernameAndCurrency> result) {
+			this.result = result;
+			return this;
+		}
+		
+		public Builder addUser(GetUserUsernameAndCurrency user) {
+			result.add(user);
+			return this;
+		}
+
+		public Builder defaults() {
+			this.id = "1";
+			return this;
+		}
+		
+		public GetUserListUsernameAndCurrencyByUserIdsResp build() {
+			return new GetUserListUsernameAndCurrencyByUserIdsResp(this);
+		}
+	}
+}
+
+=======================================================================================
+
+postman
+
+{
+    "Method": "getUserListUsernameAndCurrencyByUserIds",
+    "ID": "977d9d78-96ca-409b-9a4a-c46e016f251b",
+    "Params": {
+        "user_ids": [
+            4622042,
+            2403054,
+            674584,
+            674586,
+            674588,
+            674589,
+            674590,
+            674591,
+            674593,
+            674594,
+            674580,
+            674583,
+            674585,
+            674587,
+            674595,
+            674599
+        ]
+    },
+    "user_ids": [
+        4622042,
+        2403054,
+        674584,
+        674586,
+        674588,
+        674589,
+        674590,
+        674591,
+        674593,
+        674594,
+        674580,
+        674583,
+        674585,
+        674587,
+        674595,
+        674599
+    ]
+}
+========================================================================
+
+Response:
+{
+    "id": "977d9d78-96ca-409b-9a4a-c46e016f251b",
+    "result": [
+        {
+            "user_id": 4622042,
+            "username": "go_svc_tests06",
+            "currency_id": 1
+        },
+        {
+            "user_id": 2403054,
+            "username": "vzuat5es",
+            "currency_id": 17
+        },
+        {
+            "user_id": 674584,
+            "username": "Stokerockscene",
+            "currency_id": 1
+        },
+        {
+            "user_id": 674586,
+            "username": "poulerik",
+            "currency_id": 14
+        },
+        {
+            "user_id": 674588,
+            "username": "virtualrac01",
+            "currency_id": 1
+        },
+        {
+            "user_id": 674589,
+            "username": "whipsnapbitch",
+            "currency_id": 1
+        },
+        {
+            "user_id": 674590,
+            "username": "Aziz59",
+            "currency_id": 54
+        },
+        {
+            "user_id": 674591,
+            "username": "zusanyu",
+            "currency_id": 57
+        },
+        {
+            "user_id": 674593,
+            "username": "chris1081",
+            "currency_id": 17
+        },
+        {
+            "user_id": 674594,
+            "username": "jalbacar",
+            "currency_id": 17
+        },
+        {
+            "user_id": 674580,
+            "username": "4avdar",
+            "currency_id": 17
+        },
+        {
+            "user_id": 674583,
+            "username": "GARY_DANBY",
+            "currency_id": 1
+        },
+        {
+            "user_id": 674585,
+            "username": "_magicscore_",
+            "currency_id": 17
+        },
+        {
+            "user_id": 674587,
+            "username": "gurkirpal07",
+            "currency_id": 1
+        },
+        {
+            "user_id": 674595,
+            "username": "hampe_ponny",
+            "currency_id": 48
+        },
+        {
+            "user_id": 674599,
+            "username": "gusher69",
+            "currency_id": 1
+        }
+    ]
+}
